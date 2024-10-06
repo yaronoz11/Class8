@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {   
+               git branch: 'main', url: 'https://github.com/yaronoz11/Class8'
+               bat  'python main.py'
+            }
+        }
+    }
+}
